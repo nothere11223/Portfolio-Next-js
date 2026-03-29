@@ -1,24 +1,57 @@
+import { Cloud, Settings2, Code2 } from "lucide-react";
+
+const focusItems = [
+  {
+    title: "Cloud & Infrastructure",
+    description:
+      "Learning and working with AWS services, networking, storage, security, and deployment fundamentals for scalable systems.",
+    icon: Cloud,
+  },
+  {
+    title: "DevOps & Automation",
+    description:
+      "Exploring containerization, CI/CD workflows, monitoring, and automation using Docker, GitHub Actions, Jenkins, and Linux tools.",
+    icon: Settings2,
+  },
+  {
+    title: "Web Development",
+    description:
+      "Building responsive web applications with React, Next.js, Node.js, Express, and MongoDB to strengthen end-to-end engineering skills.",
+    icon: Code2,
+  },
+];
+
 export default function Services() {
   return (
-    <section id="services" className="min-h-screen px-6 pt-24">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">Services</h2>
+    <section id="services" className="px-6 py-20">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-10">
+          <p className="section-label">Focus Areas</p>
+          <h2 className="mt-3 section-title">
+            What I am focused on right now
+          </h2>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="p-5 bg-gray-100 rounded shadow cursor-pointer">
-            <h3 className="font-semibold mb-2">Frontend Development</h3>
-            <p className="text-gray-600">React, Next.js, Tailwind CSS</p>
-          </div>
+          {focusItems.map((item) => {
+            const Icon = item.icon;
 
-          <div className="p-5 bg-gray-100 rounded shadow cursor-pointer">
-            <h3 className="font-semibold mb-2">Backend Development</h3>
-            <p className="text-gray-600">Node.js, Express, MongoDB</p>
-          </div>
+            return (
+              <div key={item.title} className="neo p-6">
+                <div className="w-14 h-14 neo-blue flex items-center justify-center text-white mb-5">
+                  <Icon size={24} />
+                </div>
 
-          <div className="p-5 bg-gray-100 rounded shadow cursor-pointer">
-            <h3 className="font-semibold mb-2">Full-Stack Projects</h3>
-            <p className="text-gray-600">Complete MERN apps</p>
-          </div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {item.title}
+                </h3>
+
+                <p className="muted leading-7">
+                  {item.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
