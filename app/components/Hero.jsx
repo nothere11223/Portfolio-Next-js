@@ -56,7 +56,7 @@ export default function Hero() {
         <div className="order-1 md:order-2 flex justify-center md:justify-end">
           <div className="neo p-5 w-[250px] h-[250px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px]">
             <img
-              src="/myimage.jpeg"
+              src="/myimage.png"
               alt="Muhammad Abdullah"
               className="w-full h-full object-cover rounded-[22px]"
             />
