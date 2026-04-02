@@ -35,6 +35,7 @@ const skillGroups = [
       { name: "GitHub Actions", level: 60 },
       { name: "Jenkins", level: 20 },
       { name: "CI/CD", level: 60 },
+      { name: "Python", level: 50 },
     ],
   },
   {
